@@ -180,14 +180,16 @@ a {
 }
 
 .hero__title {
-    font-size: 1.9rem;
+    /*font-size: 1.9rem;*/
+    font-size: clamp(1.8em, 5vw, 3.5em); /* 画面幅に応じてフォントサイズを可変に */
     font-weight: 700;
     line-height: 1.5;
     margin-bottom: 24px;
 }
 
 .hero__subtitle {
-    font-size: 1rem;
+    font-size: clamp(1.0em, 3vw, 3.5em); /* 画面幅に応じてフォントサイズを可変に */
+    /*font-size: 1rem;*/
     margin-bottom: 40px;
 }
 
@@ -197,7 +199,7 @@ a {
 }
 
 .empathy__text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 24px;
 }
@@ -248,7 +250,8 @@ a {
     line-height: 1;
 }
 .reason-item__title {
-    font-size: 1.4em;
+    /*font-size: 1.4em;*/
+    font-size: clamp(1.3em, 5vw, 3.5em); /* 画面幅に応じてフォントサイズを可変に */
     margin-bottom: 15px;
 }
 .reason-item__text {
