@@ -86,24 +86,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Sticky Footer Visibility Control ---
-    const heroSection = document.querySelector('.hero');
     const stickyFooter = document.querySelector('.sticky-footer');
+    let lastScrollTop = 0;
 
-    if (heroSection && stickyFooter) {
-        const footerObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                // If hero section is intersecting (visible), hide the footer.
-                if (entry.isIntersecting) {
-                    stickyFooter.classList.add('is-hidden');
-                } else {
-                    // If hero section is not intersecting, show the footer.
-                    stickyFooter.classList.remove('is-hidden');
-                }
-            });
-        }, {
-            rootMargin: '-100% 0px 0px 0px' // Trigger when hero is completely out of view
-        });
-
-        footerObserver.observe(heroSection);
+    if (stickyFooter) {
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Downscroll
+                stickyFooter.classList.remove('is-hidden');
+            } else {
+                // Upscroll
+                stickyFooter.classList.add('is-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        }, false);
     }
 });
