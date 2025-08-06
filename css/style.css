@@ -385,7 +385,17 @@ a {
     overflow: hidden;
 }
 
-/* --- Pricing Section (New Styles) --- */
+/* --- Pricing Section (New Dark Theme) --- */
+.pricing {
+    background-color:  #FFFFFF;
+}
+
+.pricing-table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top:40px;
+}
+
 .pricing__intro {
     text-align: center;
     max-width: 600px;
@@ -396,77 +406,77 @@ a {
     padding: 0;
     margin: 1em 0;
 }
+
 .pricing__note-small {
     font-size: 0.8rem;
     color: #555;
     margin-top: 1em;
 }
 
-.pricing__tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-.pricing__tab {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid var(--color-accent-green);
-    background-color: var(--color-background);
-    color: var(--color-accent-green);
-    font-size: 1.5rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-.pricing__tab.active {
-    background-color: var(--color-accent-green);
-    color: var(--color-background);
-    transform: scale(1.1);
-}
-
-.pricing__panels {
-    max-width: 600px;
-    margin: 0 auto;
-}
-.pricing__panel {
-    display: none;
-    border: 2px solid var(--color-accent-green);
-    border-radius: 8px;
-    padding: 30px;
-    text-align: center;
-}
-.pricing__panel.active {
-    display: block;
-}
-.pricing__panel-title {
-    font-size: clamp(1.4em, 5vw, 3.5em);
-    margin-bottom: 10px;
-}
-.pricing__panel-per-session {
-    font-size: 1.1rem;
-    font-weight: 700;
-    transition: transform 0.3s;
-}
-.pricing__simulation-title {
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-.pricing__simulation dl div {
+.pricing-row--entrance {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 15px 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    font-size: 1.1rem;
 }
-.pricing__simulation dl dt {
+.pricing-separator {
+    text-align: center;
+    font-size: 2rem;
+}
+.pricing-subtitle {
+    font-size: 1.2rem;
     font-weight: 700;
 }
-.pricing__simulation hr {
-    border: none;
-    height: 1px;
-    background-color: #ccc;
-    margin: 15px 0;
+.pricing-subtitle span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.pricing-table th, .pricing-table td {
+    padding: 15px;
+    text-align: center;
+    border-left: 1px solid #444;
+    border-bottom: 1px solid #444;
+    font-size: 0.7rem;
+}
+.pricing-table th:first-child, .pricing-table td:first-child {
+    border-left: none;
+}
+.pricing-table thead th {
+    background-color: #F0FFF4;
+}
+
+
+.pricing-table .plan-title {
+    text-align: left;
+    background-color: var(--color-primary);
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+.pricing-table tbody td {
+    background-color: #FFFFFF;
+}
+.pricing-table tbody .plan-name {
+    background-color: #f0f0f0;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    padding:5px;
 }
 
 

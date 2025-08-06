@@ -189,66 +189,71 @@
                     <p class="pricing__note-small">※払い戻し対応の場合1枚あたりの単価は、<br>割引適用前料金の¥7,700（税込）での計算となります。</p>
                 </div>
 
-                <div class="pricing__tabs animate-on-scroll" role="tablist">
-                    <button role="tab" aria-selected="true" aria-controls="panel-48" id="tab-48" class="pricing__tab active">48</button>
-                    <button role="tab" aria-selected="false" aria-controls="panel-24" id="tab-24" class="pricing__tab">24</button>
-                    <button role="tab" aria-selected="false" aria-controls="panel-16" id="tab-16" class="pricing__tab">16</button>
-                    <button role="tab" aria-selected="false" aria-controls="panel-8" id="tab-8" class="pricing__tab">8</button>
-                </div>
+                <div class="pricing-table-container animate-on-scroll">
+                    <div class="pricing-row pricing-row--entrance">
+                        <span>入会金</span>
+                        <span>11,000円</span>
+                    </div>
 
-                <div class="pricing__panels animate-on-scroll">
-                    <div role="tabpanel" id="panel-48" aria-labelledby="tab-48" class="pricing__panel active">
-                        <h3 class="pricing__panel-title">プレミアム48回チケット</h3>
-                        <p class="pricing__panel-per-session">1回あたり：¥5,500(税込)</p>
-                        <div class="pricing__simulation">
-                            <p class="pricing__simulation-title">&lt; 週2回通った場合の費用例 (6ヶ月) &gt;</p>
-                            <dl>
-                                <div><dt>毎月</dt><dd>¥ 44,000- (税込)</dd></div>
-                                <div><dt>入会金</dt><dd>¥ 11,000- (税込)</dd></div>
-                                <hr>
-                                <div><dt>総額</dt><dd>¥ 275,000- (税込)</dd></div>
-                            </dl>
-                        </div>
-                    </div>
-                    <div role="tabpanel" id="panel-24" aria-labelledby="tab-24" class="pricing__panel">
-                        <h3 class="pricing__panel-title">プレミアム24回チケット</h3>
-                        <p class="pricing__panel-per-session">1回あたり：¥6,600(税込)</p>
-                         <div class="pricing__simulation">
-                            <p class="pricing__simulation-title">&lt; 週1回通った場合の費用例 (6ヶ月) &gt;</p>
-                            <dl>
-                                <div><dt>毎月</dt><dd>¥ 26,400- (税込)</dd></div>
-                                <div><dt>入会金</dt><dd>¥ 11,000- (税込)</dd></div>
-                                <hr>
-                                <div><dt>総額</dt><dd>¥ 169,400- (税込)</dd></div>
-                            </dl>
-                        </div>
-                    </div>
-                    <div role="tabpanel" id="panel-16" aria-labelledby="tab-16" class="pricing__panel">
-                        <h3 class="pricing__panel-title">スタンダード16回チケット</h3>
-                        <p class="pricing__panel-per-session">1回あたり：¥7,150(税込)</p>
-                         <div class="pricing__simulation">
-                            <p class="pricing__simulation-title">&lt; 週2回通った場合の費用例 (2ヶ月) &gt;</p>
-                             <dl>
-                                <div><dt>毎月</dt><dd>¥ 57,200- (税込)</dd></div>
-                                <div><dt>入会金</dt><dd>¥ 11,000- (税込)</dd></div>
-                                <hr>
-                                <div><dt>総額</dt><dd>¥ 125,400- (税込)</dd></div>
-                            </dl>
-                        </div>
-                    </div>
-                    <div role="tabpanel" id="panel-8" aria-labelledby="tab-8" class="pricing__panel">
-                        <h3 class="pricing__panel-title">スタンダード8回チケット</h3>
-                        <p class="pricing__panel-per-session">1回あたり：¥7,700(税込)</p>
-                         <div class="pricing__simulation">
-                            <p class="pricing__simulation-title">&lt; 週1回通った場合の費用例 (2ヶ月) &gt;</p>
-                             <dl>
-                                <div><dt>毎月</dt><dd>¥ 30,800- (税込)</dd></div>
-                                <div><dt>入会金</dt><dd>¥ 11,000- (税込)</dd></div>
-                                <hr>
-                                <div><dt>総額</dt><dd>¥ 72,600- (税込)</dd></div>
-                            </dl>
-                        </div>
-                    </div>
+                    <div class="pricing-separator">+</div>
+
+                    <h3 class="pricing-subtitle">各種プラン <span>価格はすべて税込表記</span></h3>
+                    
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th class="plan-title" colspan="4">プレミアム (6ヶ月コース)</th>
+                            </tr>
+                            <tr>
+                                <th class="plan-col-1"></th>
+                                <th class="plan-col-2">月額</th>
+                                <th class="plan-col-3">1回あたり</th>
+                                <th class="plan-col-4">回数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plan-name">プレミアム <br>(週2,6ヶ月)</td>
+                                <td>44,000円</td>
+                                <td>5,500円</td>
+                                <td>週2回 (全48回)</td>
+                            </tr>
+                            <tr>
+                                <td class="plan-name">ライト <br>(週1,6ヶ月)</td>
+                                <td>26,400円</td>
+                                <td>6,600円</td>
+                                <td>週1回 (全24回)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th class="plan-title" colspan="4">スタンダード (2ヶ月コース)</th>
+                            </tr>
+                            <tr>
+                                <th class="plan-col-1"></th>
+                                <th class="plan-col-2">月額</th>
+                                <th class="plan-col-3">1回あたり</th>
+                                <th class="plan-col-4">回数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plan-name">スタンダード<br>(週2,2ヶ月)</td>
+                                <td>57,200円</td>
+                                <td>7,150円</td>
+                                <td>週2回 (全16回)</td>
+                            </tr>
+                            <tr>
+                                <td class="plan-name">ライト <br>(週1,6ヶ月)</td>
+                                <td>30,800円</td>
+                                <td>7,700円</td>
+                                <td>週1回 (全8回)</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
