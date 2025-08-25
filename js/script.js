@@ -24,12 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close all other items
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('is-open');
+                otherItem.querySelector('.faq-item__q').setAttribute('aria-expanded', 'false');
                 otherItem.querySelector('.faq-item__a').style.maxHeight = null;
             });
 
             // Open the clicked item if it was closed
             if (!isOpen) {
                 item.classList.add('is-open');
+                button.setAttribute('aria-expanded', 'true');
                 answer.style.maxHeight = answer.scrollHeight + 'px';
             }
         });

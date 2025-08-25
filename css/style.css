@@ -452,7 +452,7 @@ a {
 }
 
 /* 1回あたり金額を太字に */
-.pricing-table tbody td:nth-child(2) {
+.pricing-table__cell--per-session {
     font-weight: 700;
 }
 
