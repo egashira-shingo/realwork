@@ -390,12 +390,6 @@ a {
     background-color:  #FFFFFF;
 }
 
-.pricing-table-container {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top:40px;
-}
-
 .pricing__intro {
     text-align: center;
     max-width: 600px;
@@ -411,6 +405,24 @@ a {
     font-size: 0.8rem;
     color: #555;
     margin-top: 1em;
+}
+
+/*--
+.pricing-table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top:40px;
+}
+
+.pricing__intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+.pricing__intro ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
 }
 
 .pricing-row--entrance {
@@ -477,6 +489,106 @@ a {
     font-weight: 700;
     text-align: center;
     padding:5px;
+}
+--*/
+
+.pricing-card-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.pricing-card {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* iOSでの慣性スクロールを有効化 */
+}
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.pricing-table th, .pricing-table td {
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    white-space: nowrap;
+}
+.pricing-table .col-header th {
+    background-color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.pricing-table .plan-name {
+    background-color: #F0FFF4;
+    width: 25%;
+}
+.plan-name__main {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.plan-name__sub {
+    display: block;
+    font-size: 0.8rem;
+    color: #555;
+}
+.discount {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* 1回あたり金額を太字に */
+.pricing-table tbody td:nth-child(2) {
+    font-weight: 700;
+}
+
+/* 表内のプラン種別ヘッダー */
+.plan-group-title {
+    background-color: #2E8B57;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* Recommended Plan Highlight */
+.is-recommended {
+    position: relative;
+}
+.is-recommended > td {
+    border-top: 2px solid #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
+.is-recommended > td:first-child {
+    border-left: 2px solid #FFD700;
+}
+.is-recommended > td:last-child {
+    border-right: 2px solid #FFD700;
+}
+.is-recommended .plan-name {
+    position: relative;
+    overflow: hidden; /* To clip the ribbon */
+    padding-top: 30px;
+    padding-left: 30px;
+    text-align: center;
+}
+.is-recommended .plan-name::before {
+    content: 'おすすめ！';
+    position: absolute;
+    top: 12px;
+    left: -32px;
+    width: 120px;
+    transform: rotate(-45deg);
+    background-color: #FFD700;
+    color: var(--color-text);
+    padding: 2px 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 
