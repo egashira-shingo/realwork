@@ -94,7 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (stickyFooter) {
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
+            const isAtBottom = (window.innerHeight + scrollTop) >= document.body.offsetHeight - 2; // 2px buffer
+
+            if (isAtBottom) {
+                // Hide at the very bottom
+                stickyFooter.classList.add('is-hidden');
+            } else if (scrollTop > lastScrollTop) {
                 // Downscroll
                 stickyFooter.classList.remove('is-hidden');
             } else {
