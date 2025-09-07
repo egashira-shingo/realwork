@@ -51,35 +51,38 @@
 │   │   └── responsive.css  # 共通レスポンシブ
 │   ├── js/
 │   │   └── common.js       # 共通スクリプト
-│   └── img/              # 共通画像
+│   └── img/                # 共通画像
 │
-├── fudomae/              # 不動前ページ
+├── top/                   # トップページ専用アセット
+│   ├── css/
+│   │   └── style.css       # トップページ固有の変数定義
+│   └── img/
+│       └── ...             # トップページ固有の画像
+│
+├── fudomae/               # 不動前ページ
 │   ├── index.html
 │   ├── css/
-│   │   └── style.css     # ページ固有の変数定義
+│   │   └── style.css       # ページ固有の変数定義
 │   └── img/
-│       └── ...           # ページ固有の画像
+│       └── ...             # ページ固有の画像
 │
-├── shirokanetakanawa/    # 白金高輪ページ
+├── shirokanetakanawa/     # 白金高輪ページ
 │   ├── index.html
 │   ├── css/
 │   │   └── style.css
 │   └── img/
 │       └── ...
 │
-├── index.html            # トップページ
-├── css/
-│   └── style.css         # トップページ固有の変数定義
-├── img/
-│   └── ...               # トップページ固有の画像
-└── readme.md             # このファイル
+├── index.html             # トップページ
+└── readme.md              # このファイル
 ```
 
 - **共通ファイル:**
   - 全ページで共通して使用するCSS、JavaScript、画像は `/common` ディレクトリ配下に配置します。
 
 - **個別ファイル:**
-  - 各ページ（ルート `/`、`/fudomae`、`/shirokanetakanawa`）に固有のファイルは、それぞれのディレクトリ配下に配置します。
+  - トップページ固有のファイルは `/top` 配下に配置します。
+  - 各店舗ページ（`/fudomae`、`/shirokanetakanawa`）に固有のファイルは、それぞれのディレクトリ配下に配置します。
 
 
 ### 2.2. CSS設計方針
@@ -104,7 +107,7 @@ CSSは以下の3つのファイルに役割を分割し、保守性と再利用�
 #### c. `style.css` (各ページ)
 
 - **役割:** ページ固有の「テーマ」や「スキン」を定義します。具体的には、CSS変数の値を設定する役割を担います。
-- **配置場所:** 各ページディレクトリの `css/style.css`
+- **配置場所:** 各ページディレクトリの `css/style.css`（トップページのみ `/top/css/style.css`）
 - **ルール:**
   - `:root` セレクタ内で、そのページで使用する色やフォントなどの変数を定義します。
 
@@ -142,6 +145,15 @@ HTMLファイルでは、必ず以下の順番でCSSファイルを読み込み�
 <link rel="stylesheet" href="../common/css/responsive.css">
 ```
 
+トップページの場合は次のように読み込みます。
+
+```html
+<!-- 例: トップページの場合 -->
+<link rel="stylesheet" href="top/css/style.css">
+<link rel="stylesheet" href="common/css/common.css">
+<link rel="stylesheet" href="common/css/responsive.css">
+```
+
 ### 2.3. JavaScript規約
 
 - **ファイル:** すべてのページで共通のJavaScriptを使用し、ファイルは1つに統合します。
@@ -160,14 +172,14 @@ HTMLファイルでは、必ず以下の順番でCSSファイルを読み込み�
 
 - 共通画像: `/common/img/`
   - 例: 外観/内観、フロー・理由セクションの共通素材、汎用イラストなど
-- トップページ固有: `/img/`
+- トップページ固有: `/top/img/`
 - 店舗ページ固有: `/<page>/img/`（例: `/fudomae/img/`, `/shirokanetakanawa/img/`）
 
 #### b. 参照パスの例
 
 - トップページ（`/index.html`）
   - 共通画像: `<img src="common/img/gym-exterior.png" alt="白金高輪店 外観">`
-  - 固有画像: `<img src="img/hero-visual.png" alt="メインビジュアル">`
+  - 固有画像: `<img src="top/img/hero-visual.png" alt="メインビジュアル">`
 - 店舗ページ（例: `/fudomae/index.html`）
   - 共通画像: `<img src="../common/img/scene-counseling.png" alt="カウンセリング">`
   - 固有画像: `<img src="img/hero-visual2.png" alt="メインビジュアル">`
