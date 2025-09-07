@@ -1,0 +1,72 @@
+
+@media (min-width: 768px) {
+    .sp-only { display: none; }
+    .pc-only { display: block; }
+}
+
+@media (min-width: 768px) {
+    .section { padding: 120px 0; }
+    .section__title { font-size: 2.5rem; }
+    .hero__title { font-size: 3.5rem; }
+    .hero__subtitle { font-size: 1.4rem; }
+
+    .reason-item {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    .reason-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .reason-item__img, .reason-item__content {
+        flex: 1;
+    }
+    .reason-item__img {
+        margin-bottom: 0;
+    }
+    
+    .trainer-profile {
+        flex-direction: row;
+        text-align: left;
+    }
+    .trainer-profile--reverse {
+        flex-direction: row-reverse;
+    }
+    .trainer-profile__info {
+        text-align: left;
+    }
+    .trainer-profile__img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .flow-step {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    .flow-step__img {
+        width: 300px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+    
+    .access__contents {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    .access__map, .access__info {
+        flex: 1;
+    }
+
+    .stores-list {
+        flex-direction: row; /* PC: side-by-side */
+        justify-content: center;
+        align-items: stretch; /* Make cards same height if content differs */
+    }
+
+    .store-card {
+        width: 300px; /* PC: fixed width */
+    }
+}
