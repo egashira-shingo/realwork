@@ -29,7 +29,7 @@
   - `trainers`: 所属トレーナーの紹介
   - `flow`: 無料体験の流れ
   - `pricing`: 料金プラン
-  - `access`: 店舗アクセス情報
+  - `access`: 店舗詳細
   - `faq`: よくあるご質問
   - `stores`: 他店舗への導線
 
